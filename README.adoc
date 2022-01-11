@@ -1,0 +1,96 @@
+= ESPHome ESP32-C3-DevKitC-02
+Jordan Williams <jordan@jwillikers.com>
+:experimental:
+:icons: font
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+:Adafruit-BME680: https://www.adafruit.com/product/4885[Adafruit-BME680]
+:Asciidoctor_: https://asciidoctor.org/[Asciidoctor]
+:ESP32-C3: https://www.espressif.com/en/products/socs/esp32-c3[ESP32-C3]
+:ESP32-C3-DevKitC-02: https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/hw-reference/esp32c3/user-guide-devkitc-02.html[ESP32-C3-DevKitC-02]
+:ESPHome: https://esphome.io[ESPHome]
+:Espressif: https://www.espressif.com/[Espressif]
+:Fedora: https://getfedora.org/[Fedora]
+:Fedora-Silverblue: https://silverblue.fedoraproject.org/[Fedora Silverblue]
+:fish: https://fishshell.com/[fish]
+:Git: https://git-scm.com/[Git]
+:Linux: https://www.linuxfoundation.org/[Linux]
+:Podman: https://podman.io/[Podman]
+:Python: https://www.python.org/[Python]
+:Rouge: https://rouge.jneen.net/[Rouge]
+:Ruby: https://www.ruby-lang.org/en/[Ruby]
+
+image:https://img.shields.io/github/workflow/status/jwillikers/esphome-esp32-c3-devkitc-02/CI/main[GitHub Workflow Status]
+image:https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white[pre-commit, link=https://github.com/pre-commit/pre-commit]
+
+An {ESPHome} configuration for the {Espressif} {ESP32-C3-DevKitC-02} development board powered by the RISC-V {ESP32-C3}.
+This configuration also includes an {Adafruit-BME680} temperature, humidity, pressure, and gas sensor.
+
+== Usage
+
+[NOTE]
+====
+Due to the fact that the ESP32-C3 is relatively new, ESPHome doesn't have full support for the microcontroller yet.
+Many features are unavailable using the ESP-IDF framework, which works best with the new chip.
+====
+
+[NOTE]
+====
+Support for Linux on `aarch64` is still in the works for the ESP-IDF platform, so I suggest using `x86_64`.
+====
+
+. Clone the repository.
++
+[source,sh]
+----
+git clone https://github.com/jwillikers/esphome-esp32-c3-devkitc-02.git
+----
+
+. Copy the file to the ESPHome configuration directory.
+In my case, this directory is a named volume managed by {Podman}.
++
+[source,sh]
+----
+cp esphome-esp32-c3-devkitc-02/ESP32-C3-DevKitC-02.yaml ~/.local/share/containers/storage/volumes/esphome-config/_data/
+----
+
+== Contributing
+
+Contributions in the form of issues, feedback, and even pull requests are welcome.
+Make sure to adhere to the project's link:CODE_OF_CONDUCT.adoc[Code of Conduct].
+
+== Open Source Software
+
+This project is built on the hard work of countless open source contributors.
+Several of these projects are enumerated below.
+
+* {Asciidoctor_}
+* {ESPHome}
+* {Fedora}
+* {Fedora-Silverblue}
+* {fish}
+* {Git}
+* {Linux}
+* {Podman}
+* {Python}
+* {Rouge}
+* {Ruby}
+
+== Code of Conduct
+
+Refer to the project's link:CODE_OF_CONDUCT.adoc[Code of Conduct] for details.
+
+== License
+
+This repository is licensed under the https://www.gnu.org/licenses/gpl-3.0.html[GPLv3], a copy of which is provided in the link:LICENSE.adoc[license file].
+
+© 2022 Jordan Williams
+
+== Authors
+
+mailto:{email}[{author}]

@@ -1,0 +1,14 @@
+esphome:
+  platformio_options:
+    board_build.mcu: esp32c3
+    board_build.variant: esp32c3
+# platform:
+#   - https://github.com/platformio/platform-espressif32.git#feature/arduino-upstream
+# platform_packages:
+#   - framework-arduinoespressif32 @ https://github.com/espressif/arduino-esp32.git#2.0.2
+
+esp32:
+  board: esp32dev
+  variant: esp32c3
+  framework:
+    type: esp-idf
